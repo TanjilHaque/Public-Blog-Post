@@ -24,6 +24,11 @@ const blogSchema = new Schema(
       required: true,
       trim: true,
     },
+    accessKey: {
+      type: String,
+      required: true,
+      select: false, // DO NOT return it in normal queries
+    },
     image: [{}],
   },
   {
